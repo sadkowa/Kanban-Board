@@ -3,7 +3,7 @@ import Header from "./Header";
 import Boarder from "./Boarder";
 import TaskForm from "./TaskForm";
 import TasksContext from "../context/TasksContext";
-import { initTasks } from './providers/initData';
+import { initTasks } from '../providers/initData';
 import { useStorage } from "../hooks";
 
 
@@ -35,7 +35,7 @@ const KanbanBoard = () => {
     return (
         <>
             <Header />
-            <Provider value={{ tasks, moveTask, deleteTask, addTask }}>
+            <Provider value={{ tasks, deleteTask, addTask }}>
                 <Boarder />
                 <TaskForm />
             </Provider>
