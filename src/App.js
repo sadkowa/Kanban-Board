@@ -3,9 +3,7 @@ import KanbanBoard from './components/KanbanBoard';
 
 function App() {
   return (
-    <div className="App">
-      Kanban Board
-    </div>
+    <KanbanBoard />
   );
 }
 
