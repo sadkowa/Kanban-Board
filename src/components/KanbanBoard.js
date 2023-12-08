@@ -13,6 +13,15 @@ const KanbanBoard = () => {
 
     const [getItem, setItem] = useStorage()
 
+    const deleteTask = (id) => {
+        setTasks(prevTasks => {
+            const changedTasks = prevTasks.filter(task => task.id !== id)
+            setItem('tasks', changedTasks)
+
+            return changedTasks
+        })
+    }
+
     const addTask = (task) => {
         setTasks(prevTasks => {
             const changedTasks = [...prevTasks, task]
