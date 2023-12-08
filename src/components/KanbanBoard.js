@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Header";
 import Boarder from "./Boarder";
 import TaskForm from "./TaskForm";
@@ -8,6 +8,9 @@ import { initTasks } from './providers/initData';
 
 const KanbanBoard = () => {
     const { Provider } = TasksContext
+    const [tasks, setTasks] = useState(initTasks)
+
+    
 
     return (
         <>
