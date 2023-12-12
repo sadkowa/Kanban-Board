@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import Task from "./Task";
 import TasksContext from "../context/TasksContext";
-import { initTasks } from "../providers/initData";
+// import { initTasks } from "../providers/initData";
 
 
 const Column = (props) => {
     const { name, limit, id } = props.item
-    // const {tasks} = useContext(TasksContext)
+    const {tasks} = useContext(TasksContext)
     
     const renderTasks = () => {
-        const currentTasks = initTasks.filter(task => task.idColumn === id)
+        const currentTasks = tasks.filter(task => task.idColumn === id)
         return currentTasks.map(item => <Task key={item.id} task={item} />)
     }
 
